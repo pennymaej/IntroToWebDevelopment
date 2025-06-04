@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="style-sheet.css" />
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="header-container">
       <div class="logo">
-        <img src="logo.png" alt="Company Logo" />
+        <img src="Logo.png" alt="Company Logo" />
         <span>Bloom Valley Nursery</span>
       </div>
       <nav class="main-nav">
@@ -21,13 +22,15 @@
           <li><a href="Desktop-Events.html">Events</a></li>
         </ul>
       </nav>
-      <div class="header-button">
+      <div class="contactus-button">
         <a href="Desktop-AboutUs.html#contact"><button>Contact Us</button></a>
       </div>
     </div>
   </header>
 
+  <!-- Main -->
   <main>
+    <!-- Event Banner -->
     <section class="event-banner">
       <div style="position: relative; text-align: center; color: white;">
         <img src="pollinatorgarden.png" alt="Pollinator Gardening Event" style="width: 100%; height: auto;" />
@@ -35,11 +38,12 @@
           <h2>Pollinator Gardening 101</h2>
           <p class="body-large">A free workshop with Master Gardener Jane Smith</p>
           <p>June 1st, 2025 @ 10 am</p>
-          <button>Learn More</button>
+          <button id="learnmore-btn">Learn More</button>
         </div>
       </div>
     </section>
 
+    <!-- Upcoming Events -->
     <section class="upcoming-events">
       <h2>Upcoming Workshops</h2>
       <div class="event-grid">
@@ -58,6 +62,7 @@
       </div>
     </section>
 
+    <!-- Seasonal Events -->
     <section class="seasonal-events">
       <h2>Upcoming & Seasonal Events</h2>
       <ul class="event-list">
@@ -71,6 +76,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-top">
       <section class="footer-newsletter">
@@ -100,12 +106,53 @@
     </div>
   </footer>
 
+  <!-- Learn More Modal -->
+  <div id="learnmore-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h4>Enter your email below:</h4>
+      <form id="learnmore-form">
+        <input type="email" name="email" placeholder="Enter your email" required />
+        <button type="submit">Send Me Details</button>
+      </form>
+    </div>
+  </div>
+
   <script>
+    // Newsletter form
     document.getElementById("newsletter-form").addEventListener("submit", function (e) {
       e.preventDefault();
       const emailInput = this.querySelector('input[name="email"]').value;
       alert(`Thank you for subscribing, ${emailInput}!`);
       this.reset();
+    });
+
+    // Learn more form
+    document.getElementById("learnmore-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("You'll have details in your inbox shortly!");
+      this.reset();
+      document.getElementById("learnmore-modal").style.display = "none";
+    });
+
+    // Modal logic
+    const learnMoreBtn = document.getElementById("learnmore-btn");
+    const learnMoreModal = document.getElementById("learnmore-modal");
+    const closeModalBtn = learnMoreModal.querySelector(".close-btn");
+
+    // Learn more logic
+    learnMoreBtn.addEventListener("click", () => {
+      learnMoreModal.style.display = "block";
+    });
+
+    closeModalBtn.addEventListener("click", () => {
+      learnMoreModal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === learnMoreModal) {
+        learnMoreModal.style.display = "none";
+      }
     });
   </script>
 </body>

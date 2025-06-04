@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="style-sheet.css" />
 </head>
 <body>
+  <!-- Header -->  
   <header>
     <div class="header-container">
       <div class="logo">
-        <img src="logo.png" alt="Company Logo" />
+        <img src="Logo.png" alt="Company Logo" />
         <span>Bloom Valley Nursery</span>
       </div>
       <nav class="main-nav">
@@ -21,13 +22,15 @@
           <li><a href="Desktop-Events.html">Events</a></li>
         </ul>
       </nav>
-      <div class="header-button">
+      <div class="contactus-button">
         <a href="Desktop-AboutUs.html#contact"><button>Contact Us</button></a>
       </div>
     </div>
   </header>
 
+  <!-- Main -->
   <main>
+    <!-- Gallery -->
     <section class="gallery-banner">
       <div class="gallery-header">
         <h2>Shop Our Collection</h2>
@@ -35,87 +38,89 @@
       </div>
     </section>
 
+    <!-- Product Categories -->
     <section class="category-links">
       <nav>
         <ul>
-          <li><a href="#">House Plants</a></li>
-          <li><a href="#">Trees</a></li>
-          <li><a href="#">Misc</a></li>
-          <li><a href="Desktop-Gallery.html">Shop All</a></li>
+          <li><a href="#" data-filter="houseplants">House Plants</a></li>
+          <li><a href="#" data-filter="trees">Trees</a></li>
+          <li><a href="#" data-filter="misc">Misc</a></li>
+          <li><a href="#" data-filter="all">Shop All</a></li>
         </ul>
       </nav>
     </section>
 
+    <!-- Products -->
     <section class="products">
-        <h2>Products</h2>
-        <div class="product-grid">
-      <div class="product">
-        <img src="Client1_AloePlant.png" alt="Aloe Plant" />
-        <h3>Aloe Plant</h3>
-        <p>A hardy succulent with healing properties. Perfect for sunny windowsills and natural skin remedies.</p>
-        <button>Add to Cart</button>
-      </div>
+      <h2>Products</h2>
+      <div class="product-grid">
+        <div class="product" data-category="houseplants">
+          <img src="Client1_AloePlant.png" alt="Aloe Plant" />
+          <h3>Aloe Plant</h3>
+          <p>A hardy succulent with healing properties.</p>
+          <button>Add to Cart</button>
+        </div>
 
-      <div class="product">
-        <img src="Client1_AppleTree.png" alt="Apple Tree" />
-        <h3>Apple Tree</h3>
-        <p>Grow your own crisp, delicious apples! A fruit-bearing tree that brings beauty and bounty to your yard.</p>
-        <button>Add to Cart</button>
-      </div>
+        <div class="product" data-category="trees">
+          <img src="Client1_AppleTree.png" alt="Apple Tree" />
+          <h3>Apple Tree</h3>
+          <p>Grow your own crisp, delicious apples!</p>
+          <button>Add to Cart</button>
+        </div>
 
-      <div class="product">
-        <img src="Client1_BirchTree.png" alt="Birch Tree" />
-        <h3>Birch Tree</h3>
-        <p>With its signature white bark and graceful leaves, this fast-growing tree adds charm to any landscape.</p>
-        <button>Add to Cart</button>
-      </div>
+        <div class="product" data-category="trees">
+          <img src="Client1_BirchTree.png" alt="Birch Tree" />
+          <h3>Birch Tree</h3>
+          <p>Beautiful tree with signature white bark.</p>
+          <button>Add to Cart</button>
+        </div>
 
-      <div class="product">
-        <img src="Client1_BirdHouse.png" alt="Bird House" />
-        <h3>Bird House</h3>
-        <p>Handcrafted shelter to welcome songbirds into your garden and support local wildlife.</p>
-        <button>Add to Cart</button>
-      </div>
+        <div class="product" data-category="misc">
+          <img src="Client1_BirdHouse.png" alt="Bird House" />
+          <h3>Bird House</h3>
+          <p>Handcrafted shelter for birds.</p>
+          <button>Add to Cart</button>
+        </div>
 
-      <div class="product">
-        <img src="Client1_MapleTree.png" alt="Maple Tree" />
-        <h3>Maple Tree</h3>
-        <p>Beloved for its vibrant fall foliage and elegant form. A timeless favorite for shade and beauty.</p>
-        <button>Add to Cart</button>
-      </div>
+        <div class="product" data-category="trees">
+          <img src="Client1_MapleTree.png" alt="Maple Tree" />
+          <h3>Maple Tree</h3>
+          <p>Vibrant fall foliage.</p>
+          <button>Add to Cart</button>
+        </div>
 
-      <div class="product">
-        <img src="Client1_PottingSoil.png" alt="Potting Soil" />
-        <h3>Potting Soil</h3>
-        <p>Nutrient-rich blend perfect for containers and garden beds. Promotes healthy, thriving plants.</p>
-        <button>Add to Cart</button>
-      </div>
+        <div class="product" data-category="misc">
+          <img src="Client1_PottingSoil.png" alt="Potting Soil" />
+          <h3>Potting Soil</h3>
+          <p>Nutrient-rich blend for gardens.</p>
+          <button>Add to Cart</button>
+        </div>
 
-      <div class="product">
-        <img src="Client1_SpiderPlant.png" alt="Spider Plant" />
-        <h3>Spider Plant</h3>
-        <p>A classic air-purifying plant with cascading green-and-white leaves. Great for beginners.</p>
-        <button>Add to Cart</button>
-      </div>
+        <div class="product" data-category="houseplants">
+          <img src="Client1_SpiderPlant.png" alt="Spider Plant" />
+          <h3>Spider Plant</h3>
+          <p>Classic air-purifying plant.</p>
+          <button>Add to Cart</button>
+        </div>
 
-      <div class="product">
-        <img src="Client1_StringofPearls.png" alt="String of Pearls" />
-        <h3>String of Pearls</h3>
-        <p>A whimsical trailing succulent with pearl-like leaves. Perfect for hanging baskets and shelves.</p>
-        <button>Add to Cart</button>
-      </div>
+        <div class="product" data-category="houseplants">
+          <img src="Client1_StringofPearls.png" alt="String of Pearls" />
+          <h3>String of Pearls</h3>
+          <p>Whimsical trailing succulent.</p>
+          <button>Add to Cart</button>
+        </div>
 
-      <div class="product">
-        <img src="Client1_WateringCan.png" alt="Watering Can" />
-        <h3>Watering Can</h3>
-        <p>Durable and stylish. Makes watering easy whether indoors or out.</p>
-        <button>Add to Cart</button>
+        <div class="product" data-category="misc">
+          <img src="Client1_WateringCan.png" alt="Watering Can" />
+          <h3>Watering Can</h3>
+          <p>Durable and stylish watering can.</p>
+          <button>Add to Cart</button>
+        </div>
       </div>
     </section>
-    </div>
-</section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-top">
       <section class="footer-newsletter">
@@ -142,7 +147,7 @@
     </div>
   </footer>
 
-  <!-- Modal -->
+  <!-- Cart Modal -->
   <div id="cart-modal" class="modal">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
@@ -154,8 +159,14 @@
   </div>
 
   <script>
+    // Initialize variables and constants
     let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
-  
+    const modal = document.getElementById("cart-modal");
+    const viewCartBtn = document.getElementById("view-cart-btn");
+    const closeBtn = document.querySelector(".close-btn");
+    const cartItemsList = document.getElementById("cart-items");
+
+    // Add to cart logic
     document.querySelectorAll(".product button").forEach((btn) => {
       btn.addEventListener("click", () => {
         const productName = btn.previousElementSibling.previousElementSibling.textContent;
@@ -163,13 +174,9 @@
         sessionStorage.setItem("cart", JSON.stringify(cart));
         alert(`Item ${productName} added to cart.`);
       });
-    });
-  
-    const modal = document.getElementById("cart-modal");
-    const viewCartBtn = document.getElementById("view-cart-btn");
-    const closeBtn = document.querySelector(".close-btn");
-    const cartItemsList = document.getElementById("cart-items");
-  
+    });    
+
+    // View cart logic
     viewCartBtn.addEventListener("click", () => {
       cartItemsList.innerHTML = "";
       const items = JSON.parse(sessionStorage.getItem("cart")) || [];
@@ -184,17 +191,19 @@
       }
       modal.style.display = "block";
     });
-  
+
+    // Close cart logic
     closeBtn.addEventListener("click", () => {
       modal.style.display = "none";
     });
-  
+
     window.addEventListener("click", (e) => {
       if (e.target === modal) {
         modal.style.display = "none";
       }
     });
-  
+
+    // Clear cart logic
     document.getElementById("clear-cart").addEventListener("click", () => {
       const items = JSON.parse(sessionStorage.getItem("cart")) || [];
       if (items.length === 0) {
@@ -206,7 +215,8 @@
         alert("Your cart has been cleared.");
       }
     });
-  
+
+    // Process order logic
     document.getElementById("process-order").addEventListener("click", () => {
       const items = JSON.parse(sessionStorage.getItem("cart")) || [];
       if (items.length === 0) {
@@ -218,15 +228,49 @@
         cartItemsList.innerHTML = "<li>Your cart is empty.</li>";
       }
     });
-  
-    document.getElementById("newsletter-form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const emailInput = this.querySelector('input[name="email"]').value;
-      alert(`Thank you for subscribing, ${emailInput}!`);
-      this.reset();
+
+    // Filter products based on category link from same page
+    document.querySelectorAll('.category-links a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const filter = this.getAttribute('data-filter');
+        const products = document.querySelectorAll('.product');
+
+        products.forEach(product => {
+          const category = product.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            product.style.display = 'block';
+          } else {
+            product.style.display = 'none';
+          }
+        });
+      });
     });
+
+    // Filter products based on category link from external page
+    window.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const filter = urlParams.get('category');
+
+      if (filter) {
+        document.querySelectorAll('.product').forEach(product => {
+          const category = product.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            product.style.display = 'block';
+          } else {
+            product.style.display = 'none';
+          }
+        });
+      }
+    });
+
+    // Newsletter form
+    document.getElementById("newsletter-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        const emailInput = this.querySelector('input[name="email"]').value;
+        alert(`Thank you for subscribing, ${emailInput}!`);
+        this.reset();
+      });
   </script>
-  
-  
 </body>
 </html>

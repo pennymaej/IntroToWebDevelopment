@@ -80,7 +80,7 @@ a.button {
 
 button:hover,
 a.button:hover,
-.header-button button:hover,
+.contactus-button button:hover,
 .footer-newsletter button:hover,
 .event-text-overlay button:hover {
   background-color: #96BAA0;
@@ -135,12 +135,12 @@ header {
   text-decoration: underline;
 }
 
-.header-button button {
+.contactus-button button {
   font-size: 16px;
   padding: 0.5rem 1rem;
 }
 
-/*-------------------- Hero & Event Banner --------------------*/
+/*-------------------- Event & Event Banner --------------------*/
 .event-text-overlay {
   position: absolute;
   top: 50%;
@@ -172,6 +172,17 @@ header {
   padding: 2rem 0;
 }
 
+.promos a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product a {
+  text-decoration: none;
+  color: inherit;
+  display: block; 
+}
+
 .product,
 .sale-item,
 .perks,
@@ -187,10 +198,21 @@ header {
   width: 100%;
 }
 
-.sale-item { background-color: #F0C06D; }
-.perks { background-color: #BDD4DA; }
-.testimonials { background-color: #96BAA0; }
-.event-card { background-color: #f7f7f7; }
+.sale-item {
+  background-color: #F0C06D;
+}
+
+.perks {
+  background-color: #BDD4DA;
+}
+
+.testimonials {
+  background-color: #96BAA0;
+}
+
+.event-card {
+  background-color: #f7f7f7;
+}
 
 .gallery-header {
   display: flex;
@@ -292,26 +314,25 @@ header {
 }
 
 .form-buttons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .clear-btn {
-    background-color: #777777;
-    color: white;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .clear-btn:hover {
-    background-color: #F0C06D;
-    color: #00231C;
-  }
-  
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.clear-btn {
+  background-color: #777777;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  background-color: #F0C06D;
+  color: #00231C;
+}
 
 .business-hours table {
   margin: 0 auto;
@@ -406,6 +427,36 @@ footer {
   text-align: center;
   border-top: 1px solid #ddd;
   padding-top: 1rem;
+}
+
+/*-------------------- Learn More Modal --------------------*/
+#learnmore-modal.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#learnmore-modal .modal-content {
+  background-color: #ffffff;
+  margin: 10% auto;
+  padding: 1.5em;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#learnmore-modal .close-btn {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  border: none;
+  background: none;
 }
 
 /*-------------------- Cart Modal --------------------*/
