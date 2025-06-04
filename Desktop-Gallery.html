@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom Valley Nursery - Gallery</title>
+  <link rel="stylesheet" href="style-sheet.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="logo.png" alt="Company Logo" />
+        <span>Bloom Valley Nursery</span>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="Desktop-Homepage.html">Homepage</a></li>
+          <li><a href="Desktop-Gallery.html">Gallery</a></li>
+          <li><a href="Desktop-AboutUs.html">About Us</a></li>
+          <li><a href="Desktop-Events.html">Events</a></li>
+        </ul>
+      </nav>
+      <div class="header-button">
+        <a href="Desktop-AboutUs.html#contact"><button>Contact Us</button></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="gallery-banner">
+      <div class="gallery-header">
+        <h2>Shop Our Collection</h2>
+        <button class="button" id="view-cart-btn">View Cart</button>
+      </div>
+    </section>
+
+    <section class="category-links">
+      <nav>
+        <ul>
+          <li><a href="#">House Plants</a></li>
+          <li><a href="#">Trees</a></li>
+          <li><a href="#">Misc</a></li>
+          <li><a href="Desktop-Gallery.html">Shop All</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="products">
+        <h2>Products</h2>
+        <div class="product-grid">
+      <div class="product">
+        <img src="Client1_AloePlant.png" alt="Aloe Plant" />
+        <h3>Aloe Plant</h3>
+        <p>A hardy succulent with healing properties. Perfect for sunny windowsills and natural skin remedies.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="Client1_AppleTree.png" alt="Apple Tree" />
+        <h3>Apple Tree</h3>
+        <p>Grow your own crisp, delicious apples! A fruit-bearing tree that brings beauty and bounty to your yard.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="Client1_BirchTree.png" alt="Birch Tree" />
+        <h3>Birch Tree</h3>
+        <p>With its signature white bark and graceful leaves, this fast-growing tree adds charm to any landscape.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="Client1_BirdHouse.png" alt="Bird House" />
+        <h3>Bird House</h3>
+        <p>Handcrafted shelter to welcome songbirds into your garden and support local wildlife.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="Client1_MapleTree.png" alt="Maple Tree" />
+        <h3>Maple Tree</h3>
+        <p>Beloved for its vibrant fall foliage and elegant form. A timeless favorite for shade and beauty.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="Client1_PottingSoil.png" alt="Potting Soil" />
+        <h3>Potting Soil</h3>
+        <p>Nutrient-rich blend perfect for containers and garden beds. Promotes healthy, thriving plants.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="Client1_SpiderPlant.png" alt="Spider Plant" />
+        <h3>Spider Plant</h3>
+        <p>A classic air-purifying plant with cascading green-and-white leaves. Great for beginners.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="Client1_StringofPearls.png" alt="String of Pearls" />
+        <h3>String of Pearls</h3>
+        <p>A whimsical trailing succulent with pearl-like leaves. Perfect for hanging baskets and shelves.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product">
+        <img src="Client1_WateringCan.png" alt="Watering Can" />
+        <h3>Watering Can</h3>
+        <p>Durable and stylish. Makes watering easy whether indoors or out.</p>
+        <button>Add to Cart</button>
+      </div>
+    </section>
+    </div>
+</section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <section class="footer-newsletter">
+        <h4>Subscribe to our newsletter</h4>
+        <form id="newsletter-form">
+          <input type="email" name="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+      <div class="social-links">
+        <a href="#"><img src="Facebook_f_logo_(2019).svg" alt="Facebook" width="24" /></a>
+        <a href="#"><img src="Logo_of_x.svg" alt="X" width="24" /></a>
+        <a href="#"><img src="Instagram_logo_2016.svg" alt="Instagram" width="24" /></a>
+      </div>
+    </div>
+    <nav class="footer-links">
+      <a href="Desktop-Homepage.html">Homepage</a>
+      <a href="Desktop-Gallery.html">Gallery</a>
+      <a href="Desktop-AboutUs.html">About Us</a>
+      <a href="Desktop-Events.html">Events</a>
+    </nav>
+    <div class="footer-bottom">
+      <p class="caption">© 2025 Bloom Valley Nursery. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <button id="process-order">Process Order</button>
+      <button id="clear-cart">Clear Cart</button>
+    </div>
+  </div>
+
+  <script>
+    let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+  
+    document.querySelectorAll(".product button").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const productName = btn.previousElementSibling.previousElementSibling.textContent;
+        cart.push(productName);
+        sessionStorage.setItem("cart", JSON.stringify(cart));
+        alert(`Item ${productName} added to cart.`);
+      });
+    });
+  
+    const modal = document.getElementById("cart-modal");
+    const viewCartBtn = document.getElementById("view-cart-btn");
+    const closeBtn = document.querySelector(".close-btn");
+    const cartItemsList = document.getElementById("cart-items");
+  
+    viewCartBtn.addEventListener("click", () => {
+      cartItemsList.innerHTML = "";
+      const items = JSON.parse(sessionStorage.getItem("cart")) || [];
+      if (items.length === 0) {
+        cartItemsList.innerHTML = "<li>Your cart is empty.</li>";
+      } else {
+        items.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = item;
+          cartItemsList.appendChild(li);
+        });
+      }
+      modal.style.display = "block";
+    });
+  
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+  
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  
+    document.getElementById("clear-cart").addEventListener("click", () => {
+      const items = JSON.parse(sessionStorage.getItem("cart")) || [];
+      if (items.length === 0) {
+        alert("Cart is empty. No items to clear.");
+      } else {
+        sessionStorage.removeItem("cart");
+        cart = [];
+        cartItemsList.innerHTML = "<li>Your cart is empty.</li>";
+        alert("Your cart has been cleared.");
+      }
+    });
+  
+    document.getElementById("process-order").addEventListener("click", () => {
+      const items = JSON.parse(sessionStorage.getItem("cart")) || [];
+      if (items.length === 0) {
+        alert("Cart is empty. Order not processed.");
+      } else {
+        alert("Thank you for your order!");
+        sessionStorage.removeItem("cart");
+        cart = [];
+        cartItemsList.innerHTML = "<li>Your cart is empty.</li>";
+      }
+    });
+  
+    document.getElementById("newsletter-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const emailInput = this.querySelector('input[name="email"]').value;
+      alert(`Thank you for subscribing, ${emailInput}!`);
+      this.reset();
+    });
+  </script>
+  
+  
+</body>
+</html>

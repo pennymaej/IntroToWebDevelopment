@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom Valley Nursery - Homepage</title>
+  <link rel="stylesheet" href="style-sheet.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="logo.png" alt="Company Logo" />
+        <span>Bloom Valley Nursery</span>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="Desktop-Homepage.html">Homepage</a></li>
+          <li><a href="Desktop-Gallery.html">Gallery</a></li>
+          <li><a href="Desktop-AboutUs.html">About Us</a></li>
+          <li><a href="Desktop-Events.html">Events</a></li>
+        </ul>
+      </nav>
+      <div class="header-button">
+        <a href="Desktop-AboutUs.html#contact"><button>Contact Us</button></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Banner -->
+    <section class="event-bannerx">
+      <div class="hero-containerx">
+        <img src="pollinatorgarden.png" alt="Pollinator Gardening Event" class="hero-image" width="100%"/>
+        <div class="event-text-overlay">
+          <h2>Pollinator Gardening 101</h2>
+          <p class="body-large">A free workshop with Master Gardener Jane Smith</p>
+          <p>June 1st, 2025 @ 10 am</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Highlights -->
+    <section class="client-highlights">
+      <h2>Client Highlights</h2>
+      <div class="client-highlights-grid">
+        <div class="testimonials">
+          <p>
+            "I had no idea where to start when picking out a fruit tree for my yard, but the staff at Bloom Valley Nursery made the whole process so easy. They took the time to explain the differences between apple varieties and helped me choose one that fits my space and climate. It’s been thriving ever since! I couldn’t be happier."
+            <br /><span class="caption">— Maria L., Local Homeowner</span>
+          </p>
+        </div>
+        <div class="testimonials">
+          <p>
+            "As a total beginner, I was nervous about getting into gardening—but the Intro to Gardening workshop was fantastic! The team was friendly, knowledgeable, and made everything easy to understand. I left feeling confident and excited to start planting. Bloom Valley truly cares about helping people grow."
+            <br /><span class="caption">— Jared T., First-Time Gardener</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Perks -->
+    <section class="perks-section">
+      <h2>Why Shop Here?</h2>
+      <div class="perks-grid">
+        <div class="perks"><p>Family-owned</p></div>
+        <div class="perks"><p>Community oriented</p></div>
+        <div class="perks"><p>Sustainable practices</p></div>
+        <div class="perks"><p>Variety of products</p></div>
+      </div>
+    </section>
+
+    <!-- Product Categories -->
+    <section class="product-categories">
+      <h2>Shop by Category</h2>
+      <div class="product-grid">
+
+        <!-- Promotions -->
+        <div class="product">
+          <div class="promos">
+            <h3>Shopping Promos</h3>
+            <div class="sale-grid">
+              <div class="sale-item">
+                <h4>Trees for Free</h4>
+                <p>Buy 2 trees, get the 3rd free.</p>
+              </div>
+              <div class="sale-item">
+                <h4>Houseplant Bundle</h4>
+                <p>Get 15% off when you purchase 1 Aloe Plant, 1 Spider Plant, and 1 String of Pearls.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- House Plants -->
+        <div class="product">
+          <h3>House Plants</h3>
+          <img src="Client1_AloePlant.png" alt="Aloe Plant" width="100%" />
+          <img src="Client1_SpiderPlant.png" alt="Spider Plant" width="100%" />
+          <img src="Client1_StringofPearls.png" alt="String of Pearls" width="100%" />
+        </div>
+
+        <!-- Trees -->
+        <div class="product">
+          <h3>Trees</h3>
+          <img src="Client1_AppleTree.png" alt="Apple Tree" width="100%" />
+          <img src="Client1_BirchTree.png" alt="Birch Tree" width="100%" />
+          <img src="Client1_MapleTree.png" alt="Maple Tree" width="100%" />
+        </div>
+
+        <!-- Miscellaneous -->
+        <div class="product">
+          <h3>Misc.</h3>
+          <img src="Client1_BirdHouse.png" alt="Bird House" width="100%" />
+          <img src="Client1_PottingSoil.png" alt="Potting Soil" width="100%" />
+          <img src="Client1_WateringCan.png" alt="Watering Can" width="100%" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <section class="footer-newsletter">
+        <h4>Subscribe to our newsletter</h4>
+        <form id="newsletter-form">
+          <input type="email" name="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><img src="Facebook_f_logo_(2019).svg" alt="Facebook" width="24" /></a>
+        <a href="#" aria-label="X (Twitter)"><img src="Logo_of_x.svg" alt="X" width="24" /></a>
+        <a href="#" aria-label="Instagram"><img src="Instagram_logo_2016.svg" alt="Instagram" width="24" /></a>
+      </div>
+    </div>
+
+    <nav class="footer-links">
+      <a href="Desktop-Homepage.html">Homepage</a>
+      <a href="Desktop-Gallery.html">Gallery</a>
+      <a href="Desktop-AboutUs.html">About Us</a>
+      <a href="Desktop-Events.html">Events</a>
+    </nav>
+
+    <div class="footer-bottom">
+      <p class="caption">© 2025 Bloom Valley Nursery. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("newsletter-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const emailInput = this.querySelector('input[name="email"]').value;
+      alert(`Thank you for subscribing, ${emailInput}!`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>

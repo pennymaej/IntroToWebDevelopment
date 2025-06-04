@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom Valley Nursery - About Us</title>
+  <link rel="stylesheet" href="style-sheet.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-rdfc3rD3O+F7Xv5qM8LP3kRe+YmYf7vQljwlf8qYX+I8MNv1W/9j8jrmMvDl1zpYO7F8mT9B3ay3Z2ALDnc8XQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="logo.png" alt="Company Logo" />
+        <span>Bloom Valley Nursery</span>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="Desktop-Homepage.html">Homepage</a></li>
+          <li><a href="Desktop-Gallery.html">Gallery</a></li>
+          <li><a href="Desktop-AboutUs.html">About Us</a></li>
+          <li><a href="Desktop-Events.html">Events</a></li>
+        </ul>
+      </nav>
+      <div class="header-button">
+        <a href="Desktop-AboutUs.html#contact"><button>Contact Us</button></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- About Us Banner -->
+    <section class="aboutus-banner">
+      <h2>Our Story</h2>
+    <!-- About Us Description -->
+    <section class="aboutus-description">
+      <p>
+        At <strong>Bloom Valley Nursery</strong>, we're more than just a plant shop—we're a family-owned, local nursery with deep roots in the community. For years, we’ve been helping fellow gardening lovers and homeowners grow thriving green spaces with our wide selection of plants, trees, and garden essentials.
+      </p>
+      <p>
+        Our passion for horticulture is matched only by our commitment to sustainability and creativity. Whether you're just starting your plant journey or you're a seasoned green thumb, we’re here to support you every step of the way.
+      </p>
+      <p>
+        We’re excited to bring Bloom Valley online and share the beauty of our nursery with even more of our community. This space is designed to reflect the natural charm of our gardens while making it easier than ever to browse, connect, and grow with us.
+      </p>
+      <p><strong>Let’s grow something beautiful together.</strong></p>
+    </section>
+    </section>
+
+    <!-- Contact Form and Business Hours -->
+    <section class="contact-and-hours">
+      <!-- Contact Form -->
+      <section class="contact-form" id="contact">
+        <h2>Send Us a Message</h2>
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="tel" name="phone" placeholder="Phone Number" />
+          <select name="type" required>
+            <option value="" disabled selected>Request Type</option>
+            <option value="general">General Inquiry</option>
+            <option value="product">Product Question</option>
+            <option value="special">Special Order</option>
+            <option value="order">Order Issue</option>
+            <option value="other">Other</option>
+          </select>
+          <textarea name="request" rows="5" placeholder="Your Request" required></textarea>
+          <div class="form-buttons">
+            <button type="submit">Submit</button>
+            <button type="button" id="clear-contact-form" class="clear-btn">Clear Form</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Business Hours -->
+      <section class="business-hours">
+        <h2>Business Hours</h2>
+        <table>
+          <thead>
+            <tr><th>Day</th><th>Hours</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Monday</td><td>9 a.m. to 6 p.m.</td></tr>
+            <tr><td>Tuesday</td><td>9 a.m. to 6 p.m.</td></tr>
+            <tr><td>Wednesday</td><td>9 a.m. to 6 p.m.</td></tr>
+            <tr><td>Thursday</td><td>9 a.m. to 6 p.m.</td></tr>
+            <tr><td>Friday</td><td>9 a.m. to 6 p.m.</td></tr>
+            <tr><td>Saturday</td><td>10 a.m. to 5 p.m.</td></tr>
+            <tr><td>Sunday</td><td>10 a.m. to 5 p.m.</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-top">
+      <section class="footer-newsletter">
+        <h4>Subscribe to our newsletter</h4>
+        <form id="newsletter-form">
+          <input type="email" name="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><img src="Facebook_f_logo_(2019).svg" alt="Facebook" width="24" /></a>
+        <a href="#" aria-label="X (Twitter)"><img src="Logo_of_x.svg" alt="X" width="24" /></a>
+        <a href="#" aria-label="Instagram"><img src="Instagram_logo_2016.svg" alt="Instagram" width="24" /></a>
+      </div>
+    </div>
+
+    <nav class="footer-links">
+      <a href="Desktop-Homepage.html">Homepage</a>
+      <a href="Desktop-Gallery.html">Gallery</a>
+      <a href="Desktop-AboutUs.html">About Us</a>
+      <a href="Desktop-Events.html">Events</a>
+    </nav>
+
+    <div class="footer-bottom">
+      <p class="caption">© 2025 Bloom Valley Nursery. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const contactForm = document.getElementById("contact-form");
+  
+    // Load saved form data on page load
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedData = JSON.parse(sessionStorage.getItem("contactFormData"));
+      if (savedData) {
+        contactForm.name.value = savedData.name || "";
+        contactForm.email.value = savedData.email || "";
+        contactForm.phone.value = savedData.phone || "";
+        contactForm.type.value = savedData.type || "";
+        contactForm.request.value = savedData.request || "";
+      }
+    });
+  
+    // Save form data on input change
+    contactForm.addEventListener("input", () => {
+      const formData = {
+        name: contactForm.name.value,
+        email: contactForm.email.value,
+        phone: contactForm.phone.value,
+        type: contactForm.type.value,
+        request: contactForm.request.value
+      };
+      sessionStorage.setItem("contactFormData", JSON.stringify(formData));
+    });
+  
+    // Handle form submission
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      alert("Thank you for your message!");
+      sessionStorage.removeItem("contactFormData");
+      this.reset();
+    });
+  
+    // Handle clear form
+    document.getElementById("clear-contact-form").addEventListener("click", function () {
+      contactForm.reset();
+      sessionStorage.removeItem("contactFormData");
+    });
+  
+    // Newsletter form
+    document.getElementById("newsletter-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const emailInput = this.querySelector('input[name="email"]').value;
+      alert(`Thank you for subscribing, ${emailInput}!`);
+      this.reset();
+    });
+  </script>
+  
+</body>
+</html>

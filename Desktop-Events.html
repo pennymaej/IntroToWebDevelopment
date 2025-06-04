@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bloom Valley Nursery</title>
+  <link rel="stylesheet" href="style-sheet.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="logo.png" alt="Company Logo" />
+        <span>Bloom Valley Nursery</span>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="Desktop-Homepage.html">Homepage</a></li>
+          <li><a href="Desktop-Gallery.html">Gallery</a></li>
+          <li><a href="Desktop-AboutUs.html">About Us</a></li>
+          <li><a href="Desktop-Events.html">Events</a></li>
+        </ul>
+      </nav>
+      <div class="header-button">
+        <a href="Desktop-AboutUs.html#contact"><button>Contact Us</button></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="event-banner">
+      <div style="position: relative; text-align: center; color: white;">
+        <img src="pollinatorgarden.png" alt="Pollinator Gardening Event" style="width: 100%; height: auto;" />
+        <div class="event-text-overlay">
+          <h2>Pollinator Gardening 101</h2>
+          <p class="body-large">A free workshop with Master Gardener Jane Smith</p>
+          <p>June 1st, 2025 @ 10 am</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="upcoming-events">
+      <h2>Upcoming Workshops</h2>
+      <div class="event-grid">
+        <div class="event-card">
+          <h3>How to Care for Your Houseplants</h3>
+          <p>Discover essential tips for houseplant care.</p>
+          <p><strong>Date:</strong> June 18th, 2025 @ 7 pm</p>
+          <button>Learn More</button>
+        </div>
+        <div class="event-card">
+          <h3>How to Select & Care for Your New Fruit Tree</h3>
+          <p>Learn how to plant and nurture your new fruit tree with resident staffer John Adams.</p>
+          <p><strong>Date:</strong> July 26th, 2025 @ 1 pm</p>
+          <button>Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="seasonal-events">
+      <h2>Upcoming & Seasonal Events</h2>
+      <ul class="event-list">
+        <li><strong>August 6th, 2025</strong> - How to Plant & Care for Your Bare Root Tree</li>
+        <li><strong>August 23rd, 2025</strong> - Starting Your Fall Garden</li>
+        <li><strong>September 9th, 2025</strong> - Pickling for Dummies</li>
+        <li><strong>September 30th, 2025</strong> - Community Seed Exchange</li>
+        <li><strong>October 19th, 2025</strong> - How to Prune Fruit Trees</li>
+        <li><strong>November 1st, 2025</strong> - Preparing Your Garden for Winter</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-top">
+      <section class="footer-newsletter">
+        <h4>Subscribe to our newsletter</h4>
+        <form id="newsletter-form">
+          <input type="email" name="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><img src="Facebook_f_logo_(2019).svg" alt="Facebook" width="24" /></a>
+        <a href="#" aria-label="X (Twitter)"><img src="Logo_of_x.svg" alt="X" width="24" /></a>
+        <a href="#" aria-label="Instagram"><img src="Instagram_logo_2016.svg" alt="Instagram" width="24" /></a>
+      </div>
+    </div>
+
+    <nav class="footer-links">
+      <a href="Desktop-Homepage.html">Homepage</a>
+      <a href="Desktop-Gallery.html">Gallery</a>
+      <a href="Desktop-AboutUs.html">About Us</a>
+      <a href="Desktop-Events.html">Events</a>
+    </nav>
+
+    <div class="footer-bottom">
+      <p class="caption">© 2025 Bloom Valley Nursery. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("newsletter-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const emailInput = this.querySelector('input[name="email"]').value;
+      alert(`Thank you for subscribing, ${emailInput}!`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
